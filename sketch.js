@@ -9,6 +9,16 @@ let t;
 
 function setup() {
     createCanvas(400, 400);
+    function setup() {
+
+	var clientHeight = document.getElementById('about').clientHeight;
+	var clientWidth = document.getElementById('about').clientWidth;
+
+	var cnv = createCanvas(clientWidth, clientHeight);
+	cnv.parent("about");
+        
+	background(0);
+}
  // fill(0);
  // frameRate(30);
  // createLoop({duration:3, gif:false});
