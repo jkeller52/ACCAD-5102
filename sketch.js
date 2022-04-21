@@ -11,7 +11,7 @@ let portfolio; //portfolio button
 let contact; //contact button
 
 function preload() {
-  Montserrat = loadFont('assets/Montserrat-Light.ttf');
+  Montserrat = loadFont('Montserrat-Light.ttf');
 }
 
 function setup() {
