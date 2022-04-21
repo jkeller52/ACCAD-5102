@@ -1,4 +1,5 @@
-// https://github.com/jkeller52/ACCAD-5102
+// https://github.com/jkeller52/ACCAD-5102/
+// https://jkeller52.github.io/ACCAD-5102/
 
 let density = 10; // sets amount of particles on canvas
 let threshold = 85; //sets line distance threshold
@@ -14,7 +15,7 @@ let particles = []; // an array to add multiple particles
 let Montserrat; // Font
 
 function preload() {
-  Montserrat = loadFont('Montserrat-Light.ttf');
+  Montserrat = loadFont('assets/Montserrat-Light.ttf');
 }
 
 function setup() {
@@ -151,6 +152,7 @@ class Button {
   
   display() {
 //    textFont(Montserrat); //why is this breaking it?
+    
     textSize(30);
     // noStroke(); //remove this later
     fill(215);
@@ -159,17 +161,18 @@ class Button {
     let textobj = text(this.text,this.x,this.y);
     //adds hover effect for rectangle
     if ((mouseX>this.rect_x) && (mouseX<this.rect_x+this.rect_w) && (mouseY>this.rect_y) && (mouseY<this.rect_y+this.rect_h)){
+    fill(rand_r, rand_g, rand_b);
     textobj.textSize(35);
     text(this.text,this.x,this.y);
     }
   }
   
-  buttonclicked() {
-    var d = dist(mouseX, mouseY, this.x,this.y);
-    if (d < 10) {
-      this.color = color(255,0,100)
-    }
-  }
+  // buttonclicked() {
+  //   var d = dist(mouseX, mouseY, this.x,this.y);
+  //   if (d < 10) {
+  //     this.color = color(255,0,100)
+  //   }
+  // }
 }
 
 function windowResized() {
