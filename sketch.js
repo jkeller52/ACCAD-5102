@@ -14,7 +14,7 @@ let particles = []; // an array to add multiple particles
 let Montserrat; // Font
 
 function preload() {
-  Montserrat = loadFont('assets/Montserrat-Light.ttf');
+  Montserrat = loadFont('Montserrat-Light.ttf');
 }
 
 function setup() {
